@@ -1,0 +1,21 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Pages</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+      <button type="button" ion-button color="primary" (click)="callNow(1555176000)">Call Number</button>
+      <button type="button" ion-button color="primary" (click)="submit()">HTTP</button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
