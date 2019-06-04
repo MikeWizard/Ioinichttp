@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { CallNumber } from '@ionic-native/call-number';
 import { HttpClientModule } from '@angular/common/http';
+import { GenericProvider } from '../providers/generic/generic';
 // import {  } from 'ionic-angular';
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     CallNumber,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GenericProvider
   ]
 })
 export class AppModule {}

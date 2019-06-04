@@ -23,7 +23,9 @@
   </p>
   <p>
 
-    <button type="button" ion-button color="primary" (click)="submit()">HTTP</button>
+    <button type="button" ion-button color="primary" (click)="getUsers()">HTTP</button>
     </p>
+
+    <h4 *ngFor="let user of users">{{user.first_name}}</h4>
 
 </ion-content>
